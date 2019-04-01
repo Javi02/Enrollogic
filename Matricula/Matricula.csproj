@@ -191,6 +191,7 @@
     <Content Include="img\slider.jpg" />
     <Content Include="img\sub.jpg" />
     <Content Include="img\video-bg.jpg" />
+    <Content Include="InformacionPersonal.aspx" />
     <Content Include="js\jquery.ajaxchimp.min.js" />
     <Content Include="js\jquery.counterup.min.js" />
     <Content Include="js\jquery.flipster.min.css" />
@@ -239,6 +240,13 @@
     <Content Include="InicioSesion.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InformacionPersonal.aspx.cs">
+      <DependentUpon>InformacionPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformacionPersonal.aspx.designer.cs">
+      <DependentUpon>InformacionPersonal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

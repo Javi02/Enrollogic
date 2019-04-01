@@ -15,13 +15,15 @@ namespace Entidades
         public int Estudiante { set; get; }
         public string Dia { set; get; }
         public string Hora { set; get; }
+        public string Cede { set; get; }
 
-        public SelecCurso(int id, int estudiante, string dia, string hora)
+        public SelecCurso(int id, int estudiante, string dia, string hora, string cede)
         {
             Id = id;
             Estudiante = estudiante;
             Dia = dia;
             Hora = hora;
+            Cede = cede;
         }
     }
 }

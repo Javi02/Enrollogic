@@ -11,7 +11,7 @@ namespace Logica
 {
     public class AdministrativoLog
     {
-        string connString = "server=LAPTOP-BCKLRFPR\\MSSQLSERVER01 ; database=Enrollogic_DB ; integrated security = true";
+        string connString = "server=desktop-b6efbeb\\sqlexpress ; database=Matricula ; integrated security = true";
         public static List<Administrativo> adms;
 
         public AdministrativoLog()
@@ -31,7 +31,7 @@ namespace Logica
         {
             if (buscarEstu(id) == null)
             {
-                string sql = "insert into [Enrollogic_DB].[dbo].[Usuario] ([Id], [Nombre], [Apellido] , [Telefono] , [Correo] , [Perfil] , [NombreUs], [Contrasena]) VALUES (@id, @nombre, @apellido, @correo, @telefono, @perfil, @nombreUs, @contrasena)";
+                string sql = "insert into [Matricula].[dbo].[Usuario] ([Id], [Nombre], [Apellido] , [Telefono] , [Correo] , [Perfil] , [NombreUs], [Contrasena]) VALUES (@id, @nombre, @apellido, @correo, @telefono, @perfil, @nombreUs, @contrasena)";
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
                     var filasUsuario = conn.Execute(sql, new
@@ -46,7 +46,7 @@ namespace Logica
                         contrasena
                     });
 
-                    sql = "insert into [Enrollogic_DB].[dbo].[Administrativo] ([Id], [puesto]) VALUES (@id, @puesto)";
+                    sql = "insert into [Matricula].[dbo].[Administrativo] ([Id], [puesto]) VALUES (@id, @puesto)";
                     var filasEstudiante = conn.Execute(sql, new
                     {
                         id,
@@ -74,7 +74,7 @@ namespace Logica
 
         public void actualizarInfo (int id,  int telefono, string correo)
        {
-           string sql = "update [Enrollogic_DB].[dbo].[Usuario] set Telefono = @telefono , Correo = @correo where Id = @id";
+           string sql = "update [Matricula].[dbo].[Usuario] set Telefono = @telefono , Correo = @correo where Id = @id";
            using (SqlConnection conn = new SqlConnection(connString))
            {
                var filas = conn.Execute(sql, new

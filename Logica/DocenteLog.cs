@@ -2,34 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Data.SqlClient;
-using Entidades;
 using Dapper;
-
+using Entidades;
 
 namespace Logica
 {
-    public class EstudianteLog
+    public class DocenteLogica
     {
         string connString = "server=desktop-b6efbeb\\sqlexpress ; database=Matricula ; integrated security = true";
-        public static List<Estudiante> ests;
+        public static List<Docente> docentes;
 
-        public EstudianteLog()
+        public DocenteLogica()
         {
-            verEstuds();
+            verDocente();
         }
 
-        public void verEstuds()
+        public void verDocente()
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                ests = conn.Query<Estudiante>("Select e.carrera, u.id, u.nombre, u.apellido,u.telefono, u.correo,  u.perfil, u.nombreUs, u.contrasena  from Estudiante e, Usuario u where tipo = 1; ").ToList();
+                docentes = conn.Query<Docente>("Select d.facultad, u.id, u.nombre, u.apellido, u.telefono, u.correo, u.perfil, u.nombreUs, u.contrasena from Docente d, Usuario u where tipo = 2;").ToList();
             }
         }
 
-        public Estudiante crearEstud(string carrera, int id, string nombre, string apellido, int telefono, string correo, int perfil, string nombreUs, string contrasena)
+        public Docente crearDocente(string facultad, int id, string nombre, string apellido, int telefono, string correo, int perfil, string nombreUs, string contrasena)
         {
-            if (buscarEstu(id) == null)
+            if (buscarDoc(id) == null)
             {
                 string sql = "insert into [Matricula].[dbo].[Usuario] ([Id], [Nombre], [Apellido] , [Correo] , [Telefono] , [Perfil] , [NombreUs], [Contrasena]) VALUES (@id, @nombre, @apellido, @correo, @telefono, @perfil, @nombreUs, @contrasena)";
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -46,27 +46,27 @@ namespace Logica
                         contrasena
                     });
 
-                    sql = "insert into [Matricula].[dbo].[Estudiante] ([Id], [carrera]) VALUES (@id, @carrera)";
-                    var filasEstudiante = conn.Execute(sql, new
+                    sql = "insert into [Matricula].[dbo].[Profesor] ([Id], [facultad]) VALUES (@id, @facultad)";
+                    var filasDocente = conn.Execute(sql, new
                     {
                         id,
-                        carrera
+                        facultad
                     });
                 }
-                verEstuds();
-                Estudiante estudiante = new Estudiante(carrera, id, nombre, apellido, telefono, correo, nombreUs, contrasena, perfil);
-                return estudiante;
+                verDocente();
+                Docente docente = new Docente(facultad, id, nombre, apellido,telefono, correo, nombreUs, contrasena, perfil);
+                return docente;
             }
             return null;
         }
 
-        public Estudiante buscarEstu(int id)
+        public Docente buscarDoc(int id)
         {
-            foreach (Estudiante e in ests)
+            foreach (Docente d in docentes)
             {
-                if (id == e.Id)
+                if (id == d.Id)
                 {
-                    return e;
+                    return d;
                 }
             }
             return null;
@@ -74,7 +74,7 @@ namespace Logica
 
         public void actualizarInfo(int id, int telefono, string correo)
         {
-            string sql = "update [Matricula].[dbo].[Usuario] set Telefono = @telefono, Correo = @correo where Id = @id";
+            string sql = "update [Enrollogic_DB].[dbo].[Usuario] set  Telefono = @telefono, Correo = @correo where Id = @id";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var filas = conn.Execute(sql, new
@@ -82,11 +82,11 @@ namespace Logica
                     Id = id,
                     Telefono = telefono,
                     Correo = correo
+
                 });
             }
-            verEstuds();
+            verDocente();
         }
     }
+
 }
-
-

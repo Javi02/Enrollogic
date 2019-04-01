@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main1.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -42,17 +42,18 @@
 					
 
 					<div class="wrap-input100 validate-input" data-validate = "Usuario invalido">
-                        <asp:TextBox ID="usuarioTxt" runat="server" Height="62px" Width="874px">usuario</asp:TextBox>
+                        <asp:TextBox ID="usuarioTxt" runat="server" Height="64px" Width="600px">usuario</asp:TextBox>
                         </span>
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="La contraseña es requerida para continuar">
-                        <asp:TextBox ID="contrasenaTxt" runat="server" Height="64px" Width="875px" Font-Strikeout="False">contraseña</asp:TextBox>
+                        <asp:TextBox ID="contrasenaTxt" runat="server" Height="64px" Width="600px" Font-Strikeout="False">contraseña</asp:TextBox>
                         </span>
 					</div>
 
 					<div class="container-login100-form-btn m-t-20">
-							<asp:Button class="login100-form-btn" ID="InicioSesionBtn" runat="server" Height="50px" OnClick="Button1_Click1" Text="Iniciar Sesion" Width="876px" BorderStyle="None" />
+							<asp:Button class="login100-form-btn" ID="InicioSesionBtn" runat="server" Height="50px" OnClick="Button1_Click1" Text="Iniciar Sesion" Width="600px" BorderStyle="None" />
+                       <a href="Principal.aspx">
 					</div>
 
 					<div class="text-center p-t-45 p-b-4">
@@ -95,7 +96,7 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="js/main1.js"></script>
 </body>
 </html>
 

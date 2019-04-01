@@ -45,7 +45,7 @@
 						<div class="main-menubar d-flex align-items-center">
 							<nav class="hide">
 								<a href="Principal.aspx">Inicio</a>
-								<a href="generic.html">Matricular</a>
+								<a href="InformacionPersonal.aspx">Personal</a>
 								<a href="elements.html">Elements</a>
 							</nav>
 							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
@@ -211,8 +211,8 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 			<div class="container-fluid">
 				<div class="row justify-content-center d-flex">
 					<div class="col-lg-12">
-						<h2>Some Of our <span>Latest Works</span></h2>
-						<p>Mg Shadow Computer Monitoring Software A Watchdog Protecting Your Interests</p>
+						<h2>Algunas de nuestras <span>Noticias</span></h2>
+						
 					</div>
 					<div class="active-work-slider">
 						<div class="sigle-work item">
@@ -227,14 +227,9 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 					</div>
 					<div class="active-work-slider2">
 						<div class="sigle-work item">
-							<img class="img-fluid" src="img/slider.jpg" alt="">
+							<img class="img-fluid" src="Carreras.jpg" alt="">
 						</div>
-						<div class="sigle-work item">
-							<img class="img-fluid"  src="img/slider.jpg" alt="">
-						</div>
-						<div class="sigle-work item">
-							<img class="img-fluid"  src="img/slider.jpg" alt="">
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -247,9 +242,9 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 				<div class="row justify-content-center">
 					<div class="col-lg-8">
 						<div class="section-title text-center">
-							<h3>Subscribe <br>
-							for our <span>Newsletter</span></h3>
-							<p>We won’t send any kind of spam</p>
+							<h3>Subscribase <br>
+							para recibir <span>las últimas noticias</span></h3>
+							<p>No enviaremos ningún tipo de spam</p>
 						</div>
 					</div>
 				</div>
@@ -261,7 +256,7 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 								<div style="position: absolute; left: -5000px;">
 									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
 								</div>
-								<button class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></button>
+								<button class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Suscribirme</span><span class="lnr lnr-arrow-right"></span></button>
 								<div class="info"></div>
 							</form>
 						</div>
@@ -279,10 +274,10 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 					</div>
 					<div class="col-lg-9 col-md-8 no-padding contact-right">
 						<form id="myForm" action="mail.php" method="post" class="contact-form text-right">
-							<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
-							<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
-							<textarea class="common-textarea mt-10" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-							<button class="float-left primary-btn primary circle d-inline-flex align-items-center mt-10 ml-auto"><span class="mr-10">Send Message</span><span class="lnr lnr-arrow-right"></span></button>
+							<input name="fname" placeholder="Nombre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'" class="common-input mt-10" required="" type="text">
+							<input name="email" placeholder="Correo" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo'" class="common-input mt-10" required="" type="email">
+							<textarea class="common-textarea mt-10" name="Mensaje" placeholder="Mensaje" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje'" required=""></textarea>
+							<button class="float-left primary-btn primary circle d-inline-flex align-items-center mt-10 ml-auto"><span class="mr-10">Enviar</span><span class="lnr lnr-arrow-right"></span></button>
 							<div class="alert-msg"></div>
 						</form>
 					</div>
@@ -298,10 +293,10 @@ Diseñamos carreras universitarias que cumplen con altos estándares de calidad,
 					<p class="footer-text m-0 text-white">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					<div class="footer-social d-flex align-items-center">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
+						<a href="https://www.facebook.com/ulacitcostarica"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/ulacitcostarica"><i class="fa fa-twitter"></i></a>
+						<a href="http://ulacit.eventbrite.com/"><i class="fa fa-dribbble"></i></a>
+						<a href="http://www.ulacit.ac.cr/blackboard/"><i class="fa fa-behance"></i></a>
 					</div>
 				</div>
 			</div>
