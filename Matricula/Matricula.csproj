@@ -457,6 +457,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{6a471989-0a5f-4478-99f5-0939b29a8a5c}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logica\Logica.csproj">
       <Project>{20225D2D-5AEF-4423-BC1C-BC6401781A64}</Project>
       <Name>Logica</Name>
